@@ -1,0 +1,28 @@
+def main():
+    intro()
+    more_data="y"
+    while more_data=="y" or more_data=="Y":
+
+    #Get user Sales for the month
+        user_monthly_sales=float(input("Please enter your total sales for the month:"))
+        calculate_county_sales_tax(user_monthly_sales)
+        calculate_state_sales_tax(user_monthly_sales)
+        calculate_total_sales_tax(user_monthly_sales)
+        more_data=input("Continue Y/N:")
+def intro():
+    print("This program is used to let the user enter their monthly sales")
+    print("Then calculate their sales tax, county tax and total tax which is county and sales tax together")
+    print("For reference, County sales tax is 2.5 percent, and State sales tax is 5 percent")
+    print("While the total tax rate is 2.55 percent")
+def calculate_county_sales_tax(user_monthly_sales):
+    county_sales_tax= user_monthly_sales*.05
+    print("The county sales tax is $",format(county_sales_tax,",.2f"))
+def calculate_state_sales_tax(user_monthly_sales):
+    state_sales_tax= user_monthly_sales*.025
+    print("The state sales tax is $",format(state_sales_tax,",.2f"))
+def calculate_total_sales_tax(user_monthly_sales):
+    total_sales_tax= user_monthly_sales*.075
+    print("The total sales tax is $",format(total_sales_tax,",.2f"))
+main()
+
+
